@@ -5,19 +5,6 @@ package Java;
  */
 public class AddTwoNumbers {
 
-    /**
-     * Your input
-     * [2,4,3]
-     * [5,6,4]
-     * Output
-     * [7,0,1]
-     * Expected
-     * [7,0,8]
-     * 
-     * @param l1
-     * @param l2
-     * @return
-     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode addition = new ListNode(0);
         ListNode head = addition;
