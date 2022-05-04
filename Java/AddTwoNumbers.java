@@ -10,7 +10,7 @@ public class AddTwoNumbers {
         ListNode head = addition;
 
         int carry = 0, last_digit = 0;
-        while (l1 != null || l2 != null) {
+        while (l1 != null || l2 != null || carry > 0) {
             int a = (l1 != null) ? l1.val : 0;
             int b = (l2 != null) ? l2.val : 0;
 
@@ -23,11 +23,6 @@ public class AddTwoNumbers {
                 l1 = l1.next;
             if (l2 != null)
                 l2 = l2.next;
-            head = head.next;
-        }
-        if (carry > 0) {
-            ListNode n = new ListNode(carry);
-            head.next = n;
             head = head.next;
         }
         return addition.next;
