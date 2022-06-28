@@ -1,11 +1,12 @@
-# Leetcode-Solutions
+# DSA-Practice
  
-This repository is dedicated to leetcode solution.
-This contains almost all the solution of the problems which i solved in leetcode,
-this helps me a lot to refer my solution that how previously i've solved these
-questions.
+This repository is dedicated to All DSA Questions and their Solution.
+This contains almost all the solution of the problems which i solved in leetcode, gfg and from various resources
+this helps me a lot to refer my solution that how previously i've solved these questions.
 
-I hope this will also help others 
-My Leetcode Profile [Link](https://leetcode.com/IshuPrabhakar/) :upside_down_face:
+I hope this will also help others.
 
-My linkedin profile if you like to connect [Link](https://www.linkedin.com/in/ishuprabhakar/) :upside_down_face:
+### Contributions are welcome 	:innocent:
+My Leetcode Profile [Link](https://leetcode.com/IshuPrabhakar/)   
+Connect Me On [LinkedIn](https://www.linkedin.com/in/ishuprabhakar/)  
+Reach me on [Instagram](https://www.instagram.com/ishuprabhakar/)  
