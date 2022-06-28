@@ -1,4 +1,0 @@
-*****************************
-This file is testing purpose
-This is test-2
-*****************************
