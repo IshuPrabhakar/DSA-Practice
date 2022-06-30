@@ -42,3 +42,8 @@ class Solution {
         return res;
     }
 }
+
+
+// For further reading and other solution
+// https://leetcode.com/problems/subsets/discuss/2216971/java-easy-to-understand
+// https://leetcode.com/problems/subsets/solution/
