@@ -4,5 +4,4 @@ These questions have to practice a lot and they also teach very important proble
 solving concept.
 
 ### Questions:-
-- Next Permutation
-- Subsets/Powerset
+- [Next Permutation](NextPermutation.java)
