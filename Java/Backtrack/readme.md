@@ -5,5 +5,5 @@ solving concept.
 
 ### Questions:-
 - [Letter Combinations of a Phone Number](LetterCombinationsofaPhoneNumber.java)
-- [Subset](Array/Subsets.java)
-- [Permutaion](Array/Permutations.java)
+- [Subset](./Array/Subsets.java)
+- [Permutaion](./Array/Permutations.java)
