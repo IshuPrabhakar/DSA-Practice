@@ -9,3 +9,5 @@ solving concept.
 - [Permutaion I](PermutationsI.java)
 - [Permutaion II](PermutationsII.java)
 - [Combination Sum](CombinationSum.java)
+- [Combination Sum II](CombinationSum.java)
+- [Combinations](Combinations.java)
