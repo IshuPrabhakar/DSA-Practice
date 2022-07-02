@@ -5,12 +5,11 @@ solving concept.
 
 ### Questions:-
 
-- Remove dupliacates from sorted array Part I, [Part II](RemoveDuplicatesfromSortedArrayII.java)
+- [Remove duplicate](RemoveDuplicates.java)
+- [Remove dupliacates from sorted array I](RemoveDuplicatesfromSortedArrayI.java)
+- [Remove dupliacates from sorted array II](RemoveDuplicatesfromSortedArrayII.java)
+- [Can jump](CanJump.java)
+- [Can jump II](CanJump2.java)
 
 - Binary Search
   - [Search in rotated sorted array](SearchinRotatedSortedArrayII.java)
-
-- Recursive solutions and basis for recursion
-  - [Subsets/Powerset](Subsets.java)
-  - Permutations [Part I](Permutations.java), II
-  - Combinaation sum I,II,III
