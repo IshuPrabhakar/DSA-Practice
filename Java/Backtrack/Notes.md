@@ -4,23 +4,117 @@
 - First make general backtracking solution
 - make a new recursive funtion pass all the necessary paramaters:- resultant list, input array, list to strore current combination, index
 ```
-  Ex backtrack(List<List<Integer>> res, int nums, List<Integer> curr, int index)
-  // declare a base case
-  if(index == nums.length){
-      res.add(new ArrayList<>(curr));
-    return;
-  }
-  
-  // this will pick an element 
-  Ex curr.add(nums[index])
-  backtrack(List<List<Integer>> res, int nums, List<Integer> curr, int index) 
-  
-  // this will not pick an element
-  curr.remove(curr.size()-1)  // this is bakrack step
-  backtrack(List<List<Integer>> res, int nums, List<Integer> curr, int index) // call funtiom without picking element
+ // base case
+        if(curr.length() == digits.length()){
+            // At this point we have generated all the combinations/subsequences so add it to the result
+            res.add(curr.toString());
+            return;
+        }
+        
+        int element = digits.charAt(index) - '0';
+        String value = map[element];
+        
+        // Since input is a string and represent number which in turn represent strings
+        // so we have to traverse through all the character of string represented by digits
+        for(int i = 0; i < value.length(); i++){
+            
+            curr.append(value.charAt(i));
+            combinations(res, map, curr, digits, index + 1); // recursive call
+            curr.deleteCharAt(curr.length()-1); // this is backtracking step
+            // since we are generating all the possible combination so we need to clear
+            // the current output so that next combination can be generated
+        }
+        
 ```
 - In this Question there is number which represent letter int it Ex 2 => abc, 3 => def
 - So we have to loop through these character one by one as well to make combinations
 - and make recursive call as well Do update index accordingly
 
-2. 
+2. Subsets
+- This is also known as Power Set
+- generate all the subsets of the given array
+- # Make decision tree first
+```
+ // Base case
+        if(index >= nums.size()){
+            res.add(new ArrayList(temp));
+            return;
+        }
+        
+        // Here temp is used to stroe current combination
+        
+        temp.add(nums.get(index)); // this will pick an element from the list
+        power(nums, res, index + 1, temp); // this call is with the picked element
+        temp.remove(nums.get(index)); // this will remove that element from the list
+        power(nums, res, index + 1, temp); // this call is without the picked element
+```
+
+3. Subsets II
+- This is the follow up of previous question that may contain duplicates
+- Step 1: Sort the array - to arrange duplicate in order i.e next to each other
+- Skipping all the duplicates if we had skipped first element
+```
+        while(index + 1 != nums.length && nums[index] == nums[index + 1]) index++;
+```
+
+4. Permutatations
+- We have to make permutation of the given input Array
+- i.e Pick all the elements and make permuataion
+- There are two solutions for that 
+- 1) with uisng same approch by picking an element one by one and store in temporary list
+- 2) by Swapping the elements with first position i.e at first position we have 3 choice according to the input 
+- array length then swap elements one by one and make recursive call to do rest of the task
+```
+ public void permutation(int[] nums, List<List<Integer>> ans, int index){
+        
+        // Base case 
+        if(index >= nums.length){
+            // toList() is custom fuction to convert int[] to list
+            ans.add(toList(nums));
+            return;
+        }
+        
+        // swapping element at index
+        for(int i = index; i < nums.length; i++){
+            
+            // swapping element at index
+            swap(nums, i, index );
+            
+            // Recursive call
+            permutation(nums, ans , index + 1);
+            
+            // Undo swapping
+            swap(nums, i, index);
+        }
+    }
+```
+
+5. Permutatations II
+- same Question with addition that it may contain duplicates
+- To solve this problem check if the element is picked before or not
+- if picked then do not pick
+```
+ private void backtrack(int[] nums, List<List<Integer>> res, int index){
+        // Here we will make use of another data structure that will keep check of the duplicate element
+        // if duplicate found we would simply skip that recursive call
+        
+        if(index >= nums.length){
+            res.add(toList(nums));
+            return;
+        }
+        
+        HashSet<Integer> set = new HashSet<>();
+        
+        for(int i = index; i < nums.length; i++){
+            
+            // check if the element for which we are calling is same as previous or not
+            if(set.add(nums[i]) == false) continue; // if element is present in set then it will return false else true if not present
+            
+            swap(nums, index, i); // swapping to place next element at first place
+            backtrack(nums, res, index + 1); // recursive call
+            swap(nums, index, i); // backtrack step
+        }
+    }
+```
+
+6. 
