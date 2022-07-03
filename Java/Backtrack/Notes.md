@@ -6,6 +6,10 @@
 ```
   Ex backtrack(List<List<Integer>> res, int nums, List<Integer> curr, int index)
   // declare a base case
+  if(index == nums.length){
+      res.add(new ArrayList<>(curr));
+    return;
+  }
   
   // this will pick an element 
   Ex curr.add(nums[index])
@@ -17,4 +21,6 @@
 ```
 - In this Question there is number which represent letter int it Ex 2 => abc, 3 => def
 - So we have to loop through these character one by one as well to make combinations
-- and make recursive call as well Do update index accordingliy
+- and make recursive call as well Do update index accordingly
+
+2. 
