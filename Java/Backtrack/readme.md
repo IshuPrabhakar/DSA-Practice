@@ -15,3 +15,4 @@ solving concept.
 - [N-Queens](N-Queens.java)
 - [N-Queens II](N-QueensII.java)
 - [Word Search](WordSearch.java)
+- [Palindrome Partitioning](PalindromePartitioning.java)
