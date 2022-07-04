@@ -12,3 +12,4 @@ solving concept.
 - [Combination Sum](CombinationSum.java)
 - [Combination Sum II](CombinationSum.java)
 - [Combinations](Combinations.java)
+- [N-Queens](N-Queens.java)
