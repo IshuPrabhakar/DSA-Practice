@@ -2,7 +2,7 @@
 
 ## Make decision tree first
 
-1. Letter Combination of a phone number
+### 1. Letter Combination of a phone number
 - First make general backtracking solution
 - make a new recursive funtion pass all the necessary paramaters:- resultant list, input array, list to strore current combination, index
 ```
@@ -33,7 +33,7 @@
 - and make recursive call as well Do update index accordingly
 
 
-2. Subsets
+### 2. Subsets
 - This is also known as Power Set
 - generate all the subsets of the given array
 ```
@@ -52,7 +52,7 @@
 ```
 
 
-3. Subsets II
+### 3. Subsets II
 - This is the follow up of previous question that may contain duplicates
 - Step 1: Sort the array - to arrange duplicate in order i.e next to each other
 - Skipping all the duplicates if we had skipped first element
@@ -61,7 +61,7 @@
 ```
 
 
-4. Permutatations
+### 4. Permutatations
 - We have to make permutation of the given input Array
 - i.e Pick all the elements and make permuataion
 - There are two solutions for that 
@@ -94,7 +94,7 @@
 ```
 
 
-5. Permutatations II
+### 5. Permutatations II
 - same Question with addition that it may contain duplicates
 - To solve this problem check if the element is picked before or not
 - if picked then do not pick
@@ -122,4 +122,46 @@
     }
 ```
 
-6. 
+### 6. N- Queens
+- First determine the attak range of the queen
+- i.e horizontally, vertically and diagonaly for diagonaly observe the pattern of the diagonal elements
+- store the diagonal pattern by row - column and row + column and column value since we will be traversing from left to right column wise.
+- create char array to store the queen and mark positon as well if cannot place queen there skip that column.
+
+```
+ // Base case
+        if(row == n){
+            result.add(new ArrayList<>(currentCombination));
+            return;
+        }
+        
+        for(int c = 0; c < n; c++) {
+            
+            int positive_diagonal = row - c;
+            int negative_diagonal = row + c;
+            
+            // check if queen is placed or not
+            if( col.contains(c) || posDiagonal.contains(positive_diagonal) || negDiagonal.contains(negative_diagonal) )
+                continue;
+            
+            // Creates new char row where we are trying to place queens
+            char[] q = new char[n];
+            Arrays.fill(q,'.');
+            q[c] = 'Q';
+            
+            // if Queen is place then mark it's position on the set like in which column it is placed 
+            col.add(c);
+            posDiagonal.add(positive_diagonal); // this will mark the bottom-left to top-right diagonal 
+            negDiagonal.add(negative_diagonal); // this will mark the top-left to bottom-right diagonal 
+            currentCombination.add(new String(q));
+               
+            backtrack(currentCombination, row + 1, n, result);
+               
+            currentCombination.remove(currentCombination.size()-1);
+            col.remove(c);
+            posDiagonal.remove(positive_diagonal);
+            negDiagonal.remove(negative_diagonal);
+        }
+```
+### 7. N-Queens II
+- Same as previous question ##### Note: Space complexity can be minimised using bit manupulation
