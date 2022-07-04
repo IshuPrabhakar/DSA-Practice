@@ -1,4 +1,6 @@
-## Notes
+# Notes
+
+## Make decision tree first
 
 1. Letter Combination of a phone number
 - First make general backtracking solution
@@ -30,10 +32,10 @@
 - So we have to loop through these character one by one as well to make combinations
 - and make recursive call as well Do update index accordingly
 
+
 2. Subsets
 - This is also known as Power Set
 - generate all the subsets of the given array
-- # Make decision tree first
 ```
  // Base case
         if(index >= nums.size()){
@@ -49,6 +51,7 @@
         power(nums, res, index + 1, temp); // this call is without the picked element
 ```
 
+
 3. Subsets II
 - This is the follow up of previous question that may contain duplicates
 - Step 1: Sort the array - to arrange duplicate in order i.e next to each other
@@ -56,6 +59,7 @@
 ```
         while(index + 1 != nums.length && nums[index] == nums[index + 1]) index++;
 ```
+
 
 4. Permutatations
 - We have to make permutation of the given input Array
@@ -88,6 +92,7 @@
         }
     }
 ```
+
 
 5. Permutatations II
 - same Question with addition that it may contain duplicates
