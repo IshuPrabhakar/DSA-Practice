@@ -163,5 +163,8 @@
             negDiagonal.remove(negative_diagonal);
         }
 ```
+- More [Link](https://leetcode.com/problems/n-queens-ii/discuss/2111857/JavaC%2B%2B-N-Queens-1-andand-2-oror-Almost-Same-Solution)
+
+
 ### 7. N-Queens II
-- Same as previous question ##### Note: Space complexity can be minimised using bit manupulation
+- Same as previous question #### Note: Space complexity can be minimised using bit manupulation
