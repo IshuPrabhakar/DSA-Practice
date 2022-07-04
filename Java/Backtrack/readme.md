@@ -10,7 +10,7 @@ solving concept.
 - [Permutation I](PermutationsI.java)
 - [Permutation II](PermutationsII.java)
 - [Combination Sum](CombinationSum.java)
-- [Combination Sum II](CombinationSum.java)
+- [Combination Sum II](CombinationSumII.java)
 - [Combinations](Combinations.java)
 - [N-Queens](N-Queens.java)
 - [N-Queens II](N-QueensII.java)
