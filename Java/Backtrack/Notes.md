@@ -168,3 +168,35 @@
 
 ### 7. N-Queens II
 - Same as previous question #### Note: Space complexity can be minimised using bit manupulation
+
+### 8. Word Search
+- first search the first charcter with help of loop the search for next with the help of recursion
+- Search in all four direction that is make recursive call on all four direction
+- Don't use the same charcter twice mark visited characters
+```
+// if index reaches at the end that means we have found the word
+        if(index == word.length())
+            return true;
+        
+        // Checking the boundries if the character at which we are placed is not the required character
+        if(row < 0 || col < 0 || row == m || col == n || board[row][col] != word.charAt(index))
+            return false;
+        
+        // this is to prevent resuing of the same character
+        char c = board[row][col];
+        board[row][col] = 'x';
+        
+        // top direction
+        boolean top = searchNext(board, word, row - 1, col, index + 1, m, n);
+        // right direction
+        boolean right = searchNext(board, word, row, col + 1, index + 1, m, n);
+        // bottom direction
+        boolean bottom = searchNext(board, word, row + 1, col, index + 1, m, n);
+        // left direction
+        boolean left = searchNext(board, word, row , col - 1, index + 1, m, n);
+        
+        board[row][col] = c; // undo change
+        
+        
+        return top || right || bottom || left;
+```
