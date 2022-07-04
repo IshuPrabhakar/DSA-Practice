@@ -14,3 +14,4 @@ solving concept.
 - [Combinations](Combinations.java)
 - [N-Queens](N-Queens.java)
 - [N-Queens II](N-QueensII.java)
+- [Word Search](WordSearch.java)
