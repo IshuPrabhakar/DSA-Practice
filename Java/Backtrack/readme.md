@@ -18,3 +18,4 @@ solving concept.
 - [Word Search](WordSearch.java)
 - [Palindrome Partitioning](PalindromePartitioning.java)
 - [Generate Parentheses](GenerateParentheses.java)
+- [Permutation Sequence](PermutationSequence.java)
