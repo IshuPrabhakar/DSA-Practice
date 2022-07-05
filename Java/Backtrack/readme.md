@@ -11,6 +11,7 @@ solving concept.
 - [Permutation II](PermutationsII.java)
 - [Combination Sum](CombinationSum.java)
 - [Combination Sum II](CombinationSumII.java)
+- [Combination Sum III](CombinationSumIII.java)
 - [Combinations](Combinations.java)
 - [N-Queens](N-Queens.java)
 - [N-Queens II](N-QueensII.java)
