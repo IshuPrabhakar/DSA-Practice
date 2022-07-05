@@ -17,3 +17,4 @@ solving concept.
 - [N-Queens II](N-QueensII.java)
 - [Word Search](WordSearch.java)
 - [Palindrome Partitioning](PalindromePartitioning.java)
+- [Generate Parentheses](GenerateParentheses.java)
