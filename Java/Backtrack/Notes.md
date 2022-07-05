@@ -200,3 +200,9 @@
         
         return top || right || bottom || left;
 ```
+
+### 9. Generate Parenthesis
+- first make dicison tree
+- then first open bracket then only you can close it 
+- close < open and open < n
+- More on [Link](https://leetcode.com/problems/generate-parentheses/solution/)
