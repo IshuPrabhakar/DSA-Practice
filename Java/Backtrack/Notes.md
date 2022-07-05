@@ -123,7 +123,7 @@
 ```
 
 ### 6. N- Queens
-- First determine the attak range of the queen
+- First determine the attack range of the queen
 - i.e horizontally, vertically and diagonaly for diagonaly observe the pattern of the diagonal elements
 - store the diagonal pattern by row - column and row + column and column value since we will be traversing from left to right column wise.
 - create char array to store the queen and mark positon as well if cannot place queen there skip that column.
@@ -206,3 +206,6 @@
 - then first open bracket then only you can close it 
 - close < open and open < n
 - More on [Link](https://leetcode.com/problems/generate-parentheses/solution/)
+
+### 10. kth Permutation of Sequence
+- refer youtube videos for better explanation
