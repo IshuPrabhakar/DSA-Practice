@@ -20,3 +20,4 @@ solving concept.
 - [Generate Parentheses](GenerateParentheses.java)
 - [Permutation Sequence](PermutationSequence.java)
 - [Letter Case Permutation](LetterCasePermutation.java)
+- [Sudoku Solver](SudokuSolver.java)
