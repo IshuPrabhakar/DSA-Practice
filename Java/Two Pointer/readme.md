@@ -5,3 +5,5 @@ solving concept.
 
 ### Questions:-
 - [Next Permutation](NextPermutation.java)
+- [3 Sum](3Sum.java)
+- [3 SumClosest](3SumClosest.java)
