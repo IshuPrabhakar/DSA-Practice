@@ -1,6 +1,6 @@
 ---
 title: About
-author: Ishu Prabhakr
+author: Ishu Prabhakar
 date: 2022-07-17
 category: about
 layout: post
