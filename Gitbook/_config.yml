@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            DSA Notes
+longtitle:        DSA Notes and Problems
+author:           Ishu Prabhakar
+email:            
 description: >
-  Build Jekyll site with the GitBook style.
+  A simple site with datastructure notes along with problem and their solution
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              ''
+#baseurl:          
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
