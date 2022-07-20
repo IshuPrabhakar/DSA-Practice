@@ -5,7 +5,7 @@
 ### 1. Letter Combination of a phone number
 - First make general backtracking solution
 - make a new recursive funtion pass all the necessary paramaters:- resultant list, input array, list to strore current combination, index
-```
+```java
  // base case
         if(curr.length() == digits.length()){
             // At this point we have generated all the combinations/subsequences so add it to the result
@@ -36,7 +36,7 @@
 ### 2. Subsets
 - This is also known as Power Set
 - generate all the subsets of the given array
-```
+```java
  // Base case
         if(index >= nums.size()){
             res.add(new ArrayList(temp));
@@ -56,7 +56,7 @@
 - This is the follow up of previous question that may contain duplicates
 - Step 1: Sort the array - to arrange duplicate in order i.e next to each other
 - Skipping all the duplicates if we had skipped first element
-```
+```java
         while(index + 1 != nums.length && nums[index] == nums[index + 1]) index++;
 ```
 
@@ -68,7 +68,7 @@
 - 1) with uisng same approch by picking an element one by one and store in temporary list
 - 2) by Swapping the elements with first position i.e at first position we have 3 choice according to the input 
 - array length then swap elements one by one and make recursive call to do rest of the task
-```
+```java
  public void permutation(int[] nums, List<List<Integer>> ans, int index){
         
         // Base case 
@@ -98,7 +98,7 @@
 - same Question with addition that it may contain duplicates
 - To solve this problem check if the element is picked before or not
 - if picked then do not pick
-```
+```java
  private void backtrack(int[] nums, List<List<Integer>> res, int index){
         // Here we will make use of another data structure that will keep check of the duplicate element
         // if duplicate found we would simply skip that recursive call
@@ -128,7 +128,7 @@
 - store the diagonal pattern by row - column and row + column and column value since we will be traversing from left to right column wise.
 - create char array to store the queen and mark positon as well if cannot place queen there skip that column.
 
-```
+```java
  // Base case
         if(row == n){
             result.add(new ArrayList<>(currentCombination));
@@ -173,7 +173,7 @@
 - first search the first charcter with help of loop the search for next with the help of recursion
 - Search in all four direction that is make recursive call on all four direction
 - Don't use the same charcter twice mark visited characters
-```
+```java
 // if index reaches at the end that means we have found the word
         if(index == word.length())
             return true;
