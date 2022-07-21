@@ -1,18 +1,25 @@
 class Solution {
     public int maximalRectangle(char[][] matrix) {
-       
+        
+        // Edge case
+        if(matrix == null || matrix[0].length == 0 || matrix.length == 0)
+            return 0;
+        
+        
         int n = matrix.length;
         int m = matrix[0].length;
         
         int maxArea = Integer.MIN_VALUE;
         int[] currRow = new int[m];
         
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < m; i++) {
             currRow[i] = matrix[0][i] - '0';
         }
         
         // called with 0th row
         maxArea = Math.max(maxArea, maximumArea(currRow));
+        
+        //System.out.println(maxArea);
         
         for(int row = 1; row < n; row++) {
             for(int col = 0; col < m; col++) {
@@ -23,7 +30,6 @@ class Solution {
                     currRow[col] = 0;
             }
             maxArea = Math.max(maxArea, maximumArea(currRow));
-            //System.out.print(maxArea + " ");
         }
         
         return maxArea;
@@ -41,44 +47,45 @@ class Solution {
         ArrayDeque<Integer> stack = new ArrayDeque<>();
         
         // for right boundary
-        for(int currIndex = 0; currIndex < n; currIndex++) {
-            
-            if(stack.isEmpty()) {
-                rightBoundary[currIndex] = n - 1;
+        for(int currHeight = n - 1; currHeight >= 0; currHeight--) {
+          
+            if(stack.isEmpty())
+                rightBoundary[currHeight] = n - 1;
+            // Since smaller boundary cannot be rectangles boundary ex [3, 6, 5, 2]
+            // for 6 we cannot choose 2 we have to choose 5
+            // we need equal length boundary so - 1
+            else {
+                while(!stack.isEmpty() && arr[stack.peek()] >=  arr[currHeight])
+                    stack.pop();
+                
+                rightBoundary[currHeight] = stack.isEmpty() ? n - 1 : stack.peek() - 1; 
             }
-            else{
-                 while(!stack.isEmpty() && arr[stack.peek()] >= arr[currIndex]) {
-                    rightBoundary[stack.pop()] = currIndex; // currIndex - 1
-                }
-                // if we can't find next element then we simply add curr index in result
-                rightBoundary[currIndex] = currIndex;
-            }
-            stack.push(currIndex);
+            stack.push(currHeight);
         }
-        
+
         // reset stack
         stack.clear();
         
         
-        for(int currIndex = n - 1; currIndex >= 0; currIndex--) {
+        for(int currHeight = 0; currHeight < n; currHeight++) {
             
-            if(stack.isEmpty()) {
-                leftBoundary[currIndex] = 0;
-            }
+            if(stack.isEmpty())
+                leftBoundary[currHeight] = 0;
+            // Since smaller boundary cannot be rectangles boundary ex [3, 6, 5]
+            // for 5 we cannot choose 3 we have to choose 6
+            // we need equal length boundary so + 1
             else{
-                 while(!stack.isEmpty() && arr[stack.peek()] >= arr[currIndex]) {
-                    leftBoundary[stack.pop()] = currIndex; // currIndex + 1
-                }
-                // if we can't find next element then we simply add curr index in result
-                leftBoundary[currIndex] = currIndex;
+                while(!stack.isEmpty() && arr[stack.peek()] >=  arr[currHeight])
+                    stack.pop();
+                
+                leftBoundary[currHeight] = stack.isEmpty() ? 0 : stack.peek() + 1; 
             }
-            stack.push(currIndex);
+            stack.push(currHeight);
         }
-        
         
         for(int currIndex = 0; currIndex < n; currIndex++) {
 
-            int area = (rightBoundary[currIndex] - leftBoundary[currIndex] - 1) * arr[currIndex];
+            int area = (rightBoundary[currIndex] - leftBoundary[currIndex] + 1) * arr[currIndex];
             maxArea = Math.max(maxArea, area);
         }
         
