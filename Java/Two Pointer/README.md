@@ -13,9 +13,10 @@ solving concept.
 Two pointers technique is easy to understand which is generally used to solve problem within linear time complexity.
 
 ### 1.1 Types of Two Pointers
-Collision - One array, move from two sides to middle.
-Forward - One array, both move forward.
-Parallel - Two arrays, each array has been assigned with a pointer.
+**Collision** - One array, move from two sides to middle.  
+**Forward** - One array, both move forward.  
+**Parallel** - Two arrays, each array has been assigned with a pointer.  
+
 2. Problem
 Given a sorted (in ascending order) integer array nums of n elements and a target value, find if there exists any pair of elements (nums[i], nums[j], i!=j) such that their sum is equal to target.
 
@@ -48,6 +49,9 @@ Time Complexity: O(n^2)
 
 ### 2.2 Two Pointers Solution
 As the array is sorted, we can use two pointers to solve this problem. One pointer is initially at header, another pointer is initially at tail. Get the sum of the values represented by these two pointers. If sum is equal to target value, then return. If it is smaller than the target, move the left pointer to right; otherwise, move the right pointer to left. Thus, narrow down the scope of the candidates.imageSee the following implementation.
+
+<img width="683" alt="two_pointers" src="https://user-images.githubusercontent.com/72759521/181276465-b9fca113-9a7b-44fc-8173-161253ad76f0.png">
+
 
 Two pointers, O(n)
 ```java
