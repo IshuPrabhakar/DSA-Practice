@@ -1,3 +1,9 @@
+- Must remember
+```java
+        Depth of the tree and height of the tree both are different
+        but in case oof maximum depth and height both are same
+```
+
 
 ![image_1556551007](https://user-images.githubusercontent.com/72759521/181272416-e27844dc-2d08-4781-a64d-ef056734f864.png)
 
