@@ -25,3 +25,5 @@ class Solution {
             return root; 
     }
 }
+
+// Same can be used in binary seach tree
