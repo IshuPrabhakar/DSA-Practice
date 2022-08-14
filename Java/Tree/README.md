@@ -1,4 +1,19 @@
-#### IMPORTANT
+### IMPORTANT
+
+### Flatten binary tree to linked list
+
+Approach:
+
+The algorithm can be described as:
+
+At a node(say cur) if there exists a left child, we will find the rightmost node in the left subtree(say prev).
+- We will set prev’s right child to cur’s right child,
+- We will then set cur’s right child to it’s left child.
+- We will then move cur to the next node by assigning cur it to its right child
+- We will stop the execution when cur points to NULL.
+
+![sol-3-intuition-1](https://user-images.githubusercontent.com/72759521/184534883-52601904-c7a4-4ce3-97ea-74658181fb3f.jpg)
+
 
 ![105-Page-2](https://user-images.githubusercontent.com/72759521/184075598-97f5a4a8-1e3c-4f51-9397-d5641dff4b7c.png)
 
