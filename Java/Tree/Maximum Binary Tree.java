@@ -18,6 +18,8 @@ class Solution {
         
         // TC => O(NlogN)
         // SC => O(N)
+        
+        // It is also known as cartesion tree
         if(nums.length == 0)
             return null;
         
