@@ -5,6 +5,8 @@ class Solution {
         // and Maintain a decreasing queue so that the maximum element
         // of that sliding window will present at the front of queue.
         
+        // TC => O(n) 
+        
         int size = nums.length;
         int[] result = new int[size - k + 1];
         
